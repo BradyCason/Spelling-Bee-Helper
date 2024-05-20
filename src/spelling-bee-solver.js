@@ -13,14 +13,9 @@ export default class SpellingBeeHelper{
             this.words = noPunctuationWords.filter(word => word.length > 3);
         })
         .catch(error => console.error('Error reading file:', error));
-        // console.log(textContent)
-        // const words = textContent.split(/\s+/);
-        // const noPunctuationWords = words.map(word => word.replace(/[^\w\s]/g, ''));
-        // this.words = noPunctuationWords.filter(word => word.length > 3);
     }
 
     validWord(letters, centerIndex, word){
-        console.log(word)
         if (!word.includes(letters[centerIndex])){
             return false;
         }
