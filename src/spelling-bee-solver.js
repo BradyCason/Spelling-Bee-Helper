@@ -1,16 +1,22 @@
+import textContent from './20k.txt';
+
 export default class SpellingBeeHelper{
     constructor(){
-        this.wordsPromise = fetch('src/20k.txt')
-        .then(response => response.text())
-        .then(data => {
-            // Split the text into words
-            const words = data.split(/\s+/);
-            // Remove punctuation
-            const noPunctuationWords = words.map(word => word.replace(/[^\w\s]/g, ''));
-            // Remove empty strings
-            this.words = noPunctuationWords.filter(word => word.length > 3);
-        })
-        .catch(error => console.error('Error reading file:', error));
+        // this.wordsPromise = fetch('src/20k.txt')
+        // .then(response => response.text())
+        // .then(data => {
+        //     // Split the text into words
+        //     const words = data.split(/\s+/);
+        //     // Remove punctuation
+        //     const noPunctuationWords = words.map(word => word.replace(/[^\w\s]/g, ''));
+        //     // Remove empty strings
+        //     this.words = noPunctuationWords.filter(word => word.length > 3);
+        // })
+        // .catch(error => console.error('Error reading file:', error));
+        console.log(textContent)
+        const words = textContent.split(/\s+/);
+        const noPunctuationWords = words.map(word => word.replace(/[^\w\s]/g, ''));
+        this.words = noPunctuationWords.filter(word => word.length > 3);
     }
 
     validWord(letters, centerIndex, word){
