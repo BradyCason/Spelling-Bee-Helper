@@ -24,7 +24,6 @@ function App() {
   const [letter6Class, setLetter6Class] = useState("gray-btn");
   const [letter7Class, setLetter7Class] = useState("gray-btn");
   const [solutions, setSolutions] = useState("");
-  const [maxLen, setMaxLen] = useState(0);
 
   let spellingBeeHelper = new SpellingBeeHelper();
 
@@ -99,7 +98,7 @@ function App() {
 
   return (
     <>
-      <LetterInput solve={solve} changeLetters={changeLetters} setCenter={newCenter} letter1={letter1} letter2={letter2} letter3={letter3} letter4={letter4} letter5={letter5} letter6={letter6} letter7={letter7} letter1Class={letter1Class} letter2Class={letter2Class} letter3Class={letter3Class} letter4Class={letter4Class} letter5Class={letter5Class} letter6Class={letter6Class} letter7Class={letter7Class} setMaxLen={setMaxLen}/>
+      <LetterInput solve={solve} changeLetters={changeLetters} setCenter={newCenter} letter1={letter1} letter2={letter2} letter3={letter3} letter4={letter4} letter5={letter5} letter6={letter6} letter7={letter7} letter1Class={letter1Class} letter2Class={letter2Class} letter3Class={letter3Class} letter4Class={letter4Class} letter5Class={letter5Class} letter6Class={letter6Class} letter7Class={letter7Class}/>
       <p>{solutions}</p>
     </>
   )

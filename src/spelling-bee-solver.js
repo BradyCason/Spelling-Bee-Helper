@@ -13,36 +13,8 @@ export default class SpellingBeeHelper{
         .catch(error => console.error('Error reading file:', error));
     }
 
-    // async solve(letters, centerIndex, maxLen, setSolutions){
-    //     await this.wordsPromise;
-    //     if (letters.length != 7){
-    //         return("Not enough letters")
-    //     }
-
-    //     let solutions = ""
-    //     let start = performance.now();
-    //     for (let i = 0; i < 7 ** maxLen; i++){
-    //         // convert i to base 7 number. Then each digit represents a letter
-    //         const base7 = i.toString(7);
-    //         const word = base7.replaceAll("0",letters[0]).replaceAll("1",letters[1]).replaceAll("2",letters[2]).replaceAll("3",letters[3]).replaceAll("4",letters[4]).replaceAll("5",letters[5]).replaceAll("6",letters[6]);
-            
-    //         if(this.words.includes(word) && word.includes(letters[centerIndex])){
-    //             if (solutions.length == 0){
-    //                 solutions = word
-    //             }
-    //             else{
-    //                 solutions += ", " + word
-    //             }
-    //             setSolutions(solutions)
-
-    //             await new Promise(resolve => setTimeout(resolve, 0));
-    //         }
-    //     }
-    //     let end = performance.now();
-    //     console.log((end - start)/1000);
-    // }
-
     validWord(letters, centerIndex, word){
+        console.log(word)
         if (!word.includes(letters[centerIndex])){
             return false;
         }
